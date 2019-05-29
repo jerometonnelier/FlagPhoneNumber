@@ -17,6 +17,8 @@ class SimpleViewController: UIViewController {
 		super.viewDidLoad()
 
 		title = "In Simple View"
+        phoneNumberTextField.barTintColor = .red
+        phoneNumberTextField.itemsTintColor = .green
 
 		view.backgroundColor = UIColor.groupTableViewBackground
 
