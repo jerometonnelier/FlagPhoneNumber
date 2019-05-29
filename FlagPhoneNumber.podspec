@@ -21,9 +21,9 @@ Pod::Spec.new do |s|
 	FlagPhoneNumber is a phone number textfield that allows you to choose the country code thanks to a picker. It uses libPhoneNumber to format the number in the textfield according to country code.
 	DESC
 
-	s.homepage         = 'https://github.com/chronotruck/FlagPhoneNumber'
+	s.homepage         = 'https://github.com/jerometonnelier/FlagPhoneNumber'
 	s.license          = { :type => 'Apache License 2.0', :file => 'LICENSE' }
-	s.author           = { 'Aurélien Grifasi' => 'aurelien.grifasi@chronotruck.com' }
+	s.author           = { 'Jérôme TONNELIER' => 'jerome@tonnelier.com' }
 	s.source           = { :git => 'https://github.com/jerometonnelier/FlagPhoneNumber.git', :tag => s.version.to_s }
 
 	s.ios.deployment_target = '8.0'
