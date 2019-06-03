@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026684F122A5144300365729 /* FPNSearchCountryViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = 0DF48B1522916F9F006AB39C /* FPNSearchCountryViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D1930022293078C002583B1 /* NBPhoneNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D192FD52293078B002583B1 /* NBPhoneNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D1930032293078C002583B1 /* NBAsYouTypeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D192FD62293078B002583B1 /* NBAsYouTypeFormatter.m */; };
 		0D1930042293078C002583B1 /* NBPhoneMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D192FD72293078B002583B1 /* NBPhoneMetaData.m */; };
@@ -231,6 +232,7 @@
 				0DA9CA0B2293E39500723B96 /* FlagPhoneNumber.h in Headers */,
 				0D19301B2293078C002583B1 /* NBNumberFormat.h in Headers */,
 				0D1930152293078C002583B1 /* NSArray+NBAdditions.h in Headers */,
+				026684F122A5144300365729 /* FPNSearchCountryViewController.swift in Headers */,
 				0D1930132293078C002583B1 /* NBPhoneMetaData.h in Headers */,
 				0D1930162293078C002583B1 /* NBPhoneNumberUtil.h in Headers */,
 				0D1930092293078C002583B1 /* NBRegExMatcher.h in Headers */,

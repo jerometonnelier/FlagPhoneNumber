@@ -11,9 +11,12 @@ import UIKit
 open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 
     /// the color of the various bars (navigation, toolbar, etc.)
-    open var barTintColor: UIColor = .white
+    open var pickerBarTintColor: UIColor = .white
+    /// the color of the various bars (navigation, toolbar, etc.)
+    open var navigationBarTintColor: UIColor = .white
     /// the tintCOlor for barButtonItems, title, etc.
     open var itemsTintColor: UIColor = .blue
+    open var searchControllerPresentationCompletion: ((FPNSearchCountryViewController) -> Void)? = nil
     
 	/// The size of the flag
 	@objc public var flagSize: CGSize = CGSize(width: 32, height: 32) {
@@ -377,18 +380,18 @@ open class FPNTextField: UITextField, FPNCountryPickerDelegate, FPNDelegate {
 		if let countries = countryPicker.countries {
 			let searchCountryViewController = FPNSearchCountryViewController(countries: countries)
 			let navigationViewController = UINavigationController(rootViewController: searchCountryViewController)
-            navigationViewController.navigationBar.barTintColor = barTintColor
+            navigationViewController.navigationBar.barTintColor = navigationBarTintColor
 			searchCountryViewController.delegate = self
-
             parentViewController?.present(navigationViewController, animated: true, completion: {
                 searchCountryViewController.searchController?.searchBar.tintColor = self.itemsTintColor
+                self.searchControllerPresentationCompletion?(searchCountryViewController)
             })
 		}
 	}
 
 	private func getToolBar(with items: [UIBarButtonItem]) -> UIToolbar {
 		let toolbar: UIToolbar = UIToolbar()
-        toolbar.barTintColor = barTintColor
+        toolbar.barTintColor = pickerBarTintColor
         toolbar.tintColor = itemsTintColor
 		toolbar.barStyle = UIBarStyle.default
 		toolbar.items = items

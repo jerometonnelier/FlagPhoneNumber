@@ -17,8 +17,17 @@ class SimpleViewController: UIViewController {
 		super.viewDidLoad()
 
 		title = "In Simple View"
-        phoneNumberTextField.barTintColor = .red
-        phoneNumberTextField.itemsTintColor = .green
+        phoneNumberTextField.pickerBarTintColor = .green
+        phoneNumberTextField.navigationBarTintColor = .black
+        phoneNumberTextField.itemsTintColor = .white
+        phoneNumberTextField.searchControllerPresentationCompletion = { ctrl in
+            let textFieldInsideSearchBar = ctrl.searchController?.searchBar.value(forKey: "searchField") as? UITextField
+            textFieldInsideSearchBar?.textColor = .green
+            ctrl.searchController?.searchBar.barStyle = .black
+            ctrl.searchController?.searchBar.searchBarStyle = .minimal
+            ctrl.searchController?.searchBar.tintColor = .green
+            ctrl.searchController?.searchBar.barTintColor = .red
+        }
 
 		view.backgroundColor = UIColor.groupTableViewBackground
 
